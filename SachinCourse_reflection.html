@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning Reflections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        strong {
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Course Learning Reflections</strong></h1>
+    <div>
+        <h3>1. Problems in Nature (Iteration, Recursion, Backtracking)</h3>
+        <ul>
+            <li><strong>Iteration:</strong> Processes like the water cycle (evaporation, condensation, precipitation) and seasonal migrations repeat in cycles.</li>
+            <li><strong>Recursion:</strong> Found in tree branching, fractals (like snowflakes), and the self-replicating process of DNA duplication.</li>
+            <li><strong>Backtracking:</strong> Seen in maze-solving or animal foraging where paths are retraced if they lead to dead ends.</li>
+        </ul>
+
+        <h3>2. Space and Time Efficiency</h3>
+        <p>Efficient algorithms save time and memory, helping systems run faster and handle large data effectively. Time complexity measures the number of operations (e.g., O(1), O(n), O(log n)), while space complexity tracks memory usage. Optimizing both is essential for scalable software.</p>
+
+        <h3>3. Takeaway from Different Design Principles from Chapter 2</h3>
+        <ul>
+            <li><strong>Divide and Conquer:</strong> Break down a problem into smaller, manageable parts to solve efficiently. Example: Identifying zombie children by separating detection and movement analysis.</li>
+            <li><strong>Pattern Spotting:</strong> Recognize repeated structures or trends to simplify solutions. Example: Observing geometric patterns in Indian fort designs for generalization.</li>
+            <li><strong>Essential Focus:</strong> Concentrate on key features while ignoring unnecessary details. Example: Modeling shapes by considering size and position, not texture or color.</li>
+            <li><strong>Exploration Strategies:</strong> Explore problems either deeply (DFS) or level-by-level (BFS). Example: DFS dives deep into a graph, while BFS explores breadth-wise.</li>
+            <li><strong>Efficient Filtering:</strong> Remove unnecessary or irrelevant parts of a solution to save time and resources. Example: Pruning invalid board configurations in the N-Queens problem.</li>
+            <li><strong>Delayed Updates:</strong> Postpone updates in data structures for improved performance. Example: Segment trees using lazy propagation to handle updates efficiently.</li>
+            <li><strong>Window Optimization:</strong> Process overlapping subsets of data efficiently. Example: Sliding windows for finding maximum sums in subarrays of size K.</li>
+            <li><strong>Layered Traversal:</strong> Traverse data structures level-by-level. Example: BFS used in tree or graph traversal to find shortest paths.</li>
+            <li><strong>Path Adjustment:</strong> Continuously update shortest paths during traversal. Example: Dijkstra’s algorithm updating distances to neighboring nodes.</li>
+            <li><strong>Tree Balancing:</strong> Ensure balanced structures using rotations for efficiency. Example: AVL trees maintaining balance after insertions or deletions.</li>
+            <li><strong>Network Closure:</strong> Find all possible connections or paths in a network. Example: Kleene closure to compute all routes between nodes in a graph.</li>
+            <li><strong>Pre-Calculated Solutions:</strong> Use pre-stored results to speed up computation. Example: Memoization in Fibonacci sequence calculation.</li>
+            <li><strong>Parent-Child Rules:</strong> Maintain hierarchical dominance in structures. Example: In max-heaps, parent nodes are larger than their children.</li>
+            <li><strong>Prefix and Suffix Properties:</strong> Use beginning and ending segments for efficient analysis. Example: KMP algorithm for pattern matching with prefix arrays.</li>
+            <li><strong>Problem Splitting:</strong> Divide problems into logical parts for simpler solutions. Example: QuickSort splitting arrays into smaller sections for sorting.</li>
+            <li><strong>Bitwise Tricks:</strong> Use bit-level operations for fast computations. Example: Fenwick trees leveraging bit manipulations for prefix sum queries.</li>
+            <li><strong>Result Caching:</strong> Store results of computations to avoid repeating them. Example: Caching previous calculations in dynamic programming.</li>
+        </ul>
+
+        <h3>4. Hierarchical Data and Tree Structures</h3>
+        <p>Trees efficiently manage hierarchical data. Here are some key structures:</p>
+        <ul>
+            <li><strong>Binary Search Tree (BST):</strong> Keeps data sorted, making searches faster, but can become inefficient if unbalanced.</li>
+            <li><strong>AVL Tree:</strong> A balanced BST that uses rotations to ensure fast operations.</li>
+            <li><strong>Red-Black Tree:</strong> Another balanced tree, slightly less strict but faster for insertions/deletions.</li>
+            <li><strong>Heap:</strong> Useful for priority-based tasks, like finding the maximum or minimum value.</li>
+            <li><strong>Trie:</strong> Specialized for storing and searching strings, ideal for autocomplete systems.</li>
+        </ul>
+
+        <h3>5. Difference Between Trees and Graphs</h3>
+        <p>Both trees and graphs organize data but differ in structure:</p>
+        <ul>
+            <li><strong>Tree:</strong> A hierarchical structure with one root and no cycles. Traversal methods include in-order, pre-order, and post-order.</li>
+            <li><strong>Graph:</strong> A network of interconnected nodes, allowing cycles and multiple paths. Traversal uses BFS (level-by-level) or DFS (deep exploration).</li>
+        </ul>
+
+        <h3>6. Sorting and Searching Algorithms</h3>
+        <p>Efficient sorting and searching streamline data organization and retrieval:</p>
+        <ul>
+            <li><strong>Sorting:</strong> Algorithms like QuickSort and MergeSort arrange data in specific orders, enabling better data management.</li>
+            <li><strong>Searching:</strong> Binary search excels in sorted arrays, while linear search works for unsorted data.</li>
+        </ul>
+
+        <h3>7. Importance of Graph Algorithms: Spanning Trees and Shortest Paths</h3>
+        <p>Graph algorithms play a critical role in problem-solving:</p>
+        <ul>
+            <li><strong>Spanning Trees:</strong> Algorithms like Prim's and Kruskal's minimize the cost of connecting nodes, useful for road networks and communication systems.</li>
+            <li><strong>Shortest Paths:</strong> Algorithms like Dijkstra's and Bellman-Ford find the quickest route between nodes, essential for GPS navigation and network routing.</li>
+        </ul>
+
+        <h3>8. Algorithm Design Techniques</h3>
+        <ul>
+            <li><strong>Divide and Conquer:</strong> Breaks problems into smaller parts and solves them recursively (e.g., MergeSort).</li>
+            <li><strong>Dynamic Programming:</strong> Solves problems by reusing solutions of overlapping sub-problems (e.g., Fibonacci sequence).</li>
+            <li><strong>Greedy Algorithms:</strong> Makes the best choice at each step to find an optimal solution (e.g., Huffman encoding).</li>
+            <li><strong>Backtracking:</strong> Explores all possible solutions and backtracks when necessary (e.g., Sudoku solver).</li>
+        </ul>
+    </div>
+</body>
+</html>
