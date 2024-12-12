@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Emergency Management Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1E90FF;
+        }
+
+        p, ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #87CEFA;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .content-box {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-box:last-child {
+            margin-right: 0;
+        }
+
+        .code-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Integrated Emergency Management Platform</h1>
+</header>
+
+<section>
+    <div class="content-container">
+        <div class="content-box">
+            <h2>Algorithms and Data Structures Used</h2>
+            <p>The following algorithms and data structures are integral to building the platform:</p>
+            <ul>
+                <li><strong>Graph Theory:</strong> Used in routing and dispatch algorithms, such as Dijkstra’s algorithm for shortest path calculations.</li>
+                <li><strong>Priority Queues:</strong> Ensures emergency requests are processed in order of importance.</li>
+                <li><strong>Dynamic Programming:</strong> Utilized for resource allocation, including medical supplies and workforce distribution during disasters.</li>
+                <li><strong>Disjoint Set:</strong> Manages different groups of emergency responders and affected areas to avoid redundancy.</li>
+            </ul>
+            <p>These algorithms enable real-time coordination, efficient decision-making, and resource optimization during emergencies.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="content-box code-box">
+        <h2>Simple C++ Code Example</h2>
+        <pre>
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+struct Node {
+    int id;
+    int distance;
+    bool operator>(const Node& other) const {
+        return distance > other.distance;
+    }
+};
+
+void dijkstra(int start, const vector<vector<int>>& graph) {
+    int n = graph.size();
+    vector<int> dist(n, INT_MAX);
+    priority_queue<Node, vector<Node>, greater<Node>> pq;
+
+    dist[start] = 0;
+    pq.push({start, 0});
+
+    while (!pq.empty()) {
+        Node curr = pq.top();
+        pq.pop();
+
+        for (int i = 0; i < n; ++i) {
+            if (graph[curr.id][i] != 0 && dist[i] > dist[curr.id] + graph[curr.id][i]) {
+                dist[i] = dist[curr.id] + graph[curr.id][i];
+                pq.push({i, dist[i]});
+            }
+        }
+    }
+
+    cout << "Shortest distances from node " << start << ":\n";
+    for (int i = 0; i < n; ++i) {
+        cout << "To " << i << ": " << dist[i] << endl;
+    }
+}
+
+int main() {
+    vector<vector<int>> graph = {
+        {0, 10, 0, 0, 0, 0},
+        {10, 0, 20, 0, 0, 0},
+        {0, 20, 0, 5, 0, 0},
+        {0, 0, 5, 0, 10, 0},
+        {0, 0, 0, 10, 0, 15},
+        {0, 0, 0, 0, 15, 0}
+    };
+    
+    dijkstra(0, graph);
+    return 0;
+}
+        </pre>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Integrated Emergency Management Platform | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+
